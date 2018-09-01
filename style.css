@@ -3,9 +3,9 @@ body {
 }
 
 .calculator {
+    margin: 7% auto;
     width: 400px;
     height: 460px;
-    margin: 10vh auto;
     border: 1px solid #2f3640;
     border-radius: 20px;
 
@@ -18,10 +18,10 @@ body {
 }
 
 .output-cover {
-    margin-top: 30px;
-    margin-left: 25px;
-    width: 350px;
-    height: 66px;
+    margin-top: 7.5%;
+    margin-left: 6.25%;
+    width: 87.5%;
+    height: 14.35%;
     background-color: #000;
 }
 
@@ -36,30 +36,85 @@ body {
 }
 
 .container {
-    margin-top: 35px;
+    margin-top: 7.61%;
     padding: 0;
-    width: 350px;
-    height: 290px;
-    clear: both;
+    width: 87.5%;
+    height: 63%;
 }
 
-.key {
+button {
     margin-bottom: 15px;
     display: block;
     width: 100%;
     height: 45px;
     padding: 0;
-    float: left;
     border: none;
     border-radius: 12px;
-    background-image: linear-gradient(to right, #0097e6 , #00a8ff);
     color: #fff;
     text-align: center;
     font-weight: bold;
     font-size: 18px;
 
+    transition: .1s ease-in-out;
+
     /* box shadow */
-    -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,1);
-    -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,1);
-    box-shadow: 0px 3px 3px 0px rgba(0,0,0,1);
+    -webkit-box-shadow: 0px 4px 4px 0px #000;
+    -moz-box-shadow: 0px 4px 4px 0px #000;
+    box-shadow: 0px 4px 4px 0px #000;
+}
+
+button:focus {
+    -webkit-outline: none;
+    -moz-outline: none;
+    outline: none;
+}
+
+button:active {
+    box-shadow: 0px 2px 2px 0px #000916;
+    transform: translateY(4px);
+}
+
+.key {
+    background-image: linear-gradient(to right, #0097e6 , #00a8ff);
+}
+
+.dlc {
+    background-image: linear-gradient(to right, #0a3d62 , #3c6382);
+}
+
+.actions {
+    background-image: linear-gradient(to right, #1e3799 , #4a69bd);
+}
+
+.equal {
+    background-image: linear-gradient(to right, #eb2f06 , #e55039);
+}
+
+/*RWD*/
+
+@media only screen and (max-width: 576px) {
+    .calculator {
+        margin-top: 10vh;
+        width: 95vw;
+    }
+}
+
+/*iPad*/
+@media only screen
+and (min-width: 768px) 
+and (max-width: 1024px) {
+    .calculator {
+        margin-top: 20vh;
+        width: 52vw;
+    }
+}
+
+/*iPad Pro*/
+@media only screen 
+and (min-width: 1024px) 
+and (max-width: 1024px) {
+    .calculator {
+        margin-top: 20vh;
+        width: 41vw;
+    }
 }
